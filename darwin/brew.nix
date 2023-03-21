@@ -23,6 +23,7 @@ in {
       "google-chrome"
       "rectangle"
       "logitech-options"
+      "alt-tab"
 
       # Office
       "dropbox"
