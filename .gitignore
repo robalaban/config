@@ -1,0 +1,13 @@
+# Resulting config
+/result
+
+# Installed packages
+/bat
+/alacritty
+/htop
+/git
+/direnv
+/tmux
+
+# Locks
+flake.lock
