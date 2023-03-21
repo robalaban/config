@@ -8,7 +8,7 @@ This repository keeps a [changelog](docs/CHANGELOG.md) of the most important mod
 
 ## Installation
 
-Install nix using the official docs [here](https://nixos.org/download.html#nix-install-macos). Git clone the repository, (recommendation is in) `.config`, look through, replace usernames / hosts and git email address with your own.
+Install nix using the [official docs](https://nixos.org/download.html#nix-install-macos). Git clone the repository, (recommendation is in) `.config`, look through, replace usernames / hosts and git email address with your own.
 
 ## Notes
 
