@@ -1,6 +1,6 @@
 # Nix config for MacOS
 
-![2d graphics, laptop in the middle of a cyberpunk city, screen glowing, neon lightning, with a wrench as the wallpaper 2d --ar 16:9](assets/cover.png "Generated with Midjourney, prompt is in the alt-tag")
+![2d graphics, laptop in the middle of a cyberpunk city, screen glowing, neon lightning, with a wrench as the wallpaper 2d --ar 16:9](assets/cover.png "Generated with Midjourney: 2d graphics, laptop in the middle of a cyberpunk city, screen glowing, neon lightning, with a wrench as the wallpaper 2d --ar 16:9")
 
 This is config, it manages my Macbook ( apple silicon ) installation, dotfiles and some development packages. It's based on [nix-darwin](https://github.com/LnL7/nix-darwin), [home-manager](https://github.com/nix-community/home-manager) and [nix-flakes](https://nixos.wiki/wiki/Flakes).
 
