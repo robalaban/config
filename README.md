@@ -17,7 +17,7 @@ This repository is focused on Macbooks with Apple silicon `aarch64-darwin`.
 Keep in mind that if you are working with Nix flakes inside of a git repository, `nix` considers any modifications which
 are not added as "dirty". To fix this, add the items to the staging area, using `git add .` before running `darwin-rebuild switch`.
 
-This repository is inspired by a lot of folks who have taken time to share their personal Nix configurations and knowladge. In no particular order here are some of them:
+This repository is inspired by a lot of folks who have taken time to share their personal Nix configurations and knowledge. In no particular order here are some of them:
 
 - https://github.com/phlmn/nix-darwin-config
 - https://github.com/nix-community/home-manager
