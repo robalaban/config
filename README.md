@@ -22,3 +22,4 @@ This repository is inspired by a lot of folks who have taken time to share their
 - https://github.com/phlmn/nix-darwin-config
 - https://github.com/nix-community/home-manager
 - https://xyno.space/post/nix-darwin-introduction
+- https://determinate.systems

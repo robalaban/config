@@ -14,7 +14,7 @@
         zsh_indicator = "[ZSH](bright-white) ";
       };
       nix_shell = {
-        symbol = "";
+        symbol = " ";
         format = "[$symbol$name]($style) ";
         style = "bright-purple bold";
       };
