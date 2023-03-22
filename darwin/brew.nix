@@ -33,6 +33,6 @@ in {
       "alacritty"
     ];
 
-    taps = [ "homebrew/cask" "homebrew/cask-versions" ];
+    taps = [ "homebrew/cask" "homebrew/cask-versions" "homebrew/cask-drivers"];
   };
 }
