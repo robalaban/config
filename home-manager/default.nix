@@ -28,7 +28,7 @@
       nodePackages.typescript
       nodejs
       nixfmt
-      nvim
+      neovim
 
       # Useful nix related tools
       cachix # adding/managing alternative binary caches hosted by Cachix
