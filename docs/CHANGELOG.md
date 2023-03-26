@@ -4,6 +4,19 @@ All notable changes to the config will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
+## [0.0.3] - 2023-03-26
+
+### Added
+
+- Add `podman` - docker alternative, plays better on Apple silicon
+- Add `tree` ( unix tree for mac )
+- Add `exa` better `ls` ( written in Rust )
+
+### Changed
+
+- Readme, added project structure information
+- VSCode config
+
 ## [0.0.2] - 2023-03-22
 
 ### Changed

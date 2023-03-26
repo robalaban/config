@@ -38,6 +38,12 @@
         "**/.project" = true;
         "**/.settings" = true;
       };
+      "github.copilot.enable" = {
+        "*" = true;
+        "yaml" = false;
+        "plaintext" = false;
+        "markdown" = true;
+      };
     };
   };
 }

@@ -10,6 +10,25 @@ This repository keeps a [changelog](docs/CHANGELOG.md) of the most important mod
 
 Install nix using the [official docs](https://nixos.org/download.html#nix-install-macos). Git clone the repository, (recommendation is in) `.config`, look through, replace usernames / hosts and git email address with your own.
 
+## Project Structure
+
+```shell
+├── configuration.nix
+├── darwin # everything related to MacOS
+│   ├── brew.nix # brew packages - GUI apps
+│   ├── default.nix # system configuration
+│   ├── preferences.nix # system preferences
+├── home-manager # dotfiles
+│   ├── config # all the dotfiles configuration
+│   │   ├── alacritty.nix
+│   │   ├── git.nix
+│   │   ├── starship.nix
+│   │   ├── vscode # VSCode configuration
+│   │   │   └── default.nix
+│   │   └── zsh.nix # zsh configuration
+│   └── default.nix
+```
+
 ## Notes
 
 This repository is focused on Macbooks with Apple silicon `aarch64-darwin`.

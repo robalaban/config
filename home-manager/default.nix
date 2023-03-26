@@ -21,6 +21,7 @@
       coreutils
       curl
       wget
+      tree
 
       # Dev stuff
       # (agda.withPackages (p: [ p.standard-library ]))
@@ -30,6 +31,7 @@
       nixfmt
       neovim
       difftastic
+      podman
 
       # Useful nix related tools
       cachix # adding/managing alternative binary caches hosted by Cachix
