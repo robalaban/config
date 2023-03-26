@@ -22,6 +22,7 @@
       curl
       wget
       tree
+      exa # ls replacement
 
       # Dev stuff
       # (agda.withPackages (p: [ p.standard-library ]))
