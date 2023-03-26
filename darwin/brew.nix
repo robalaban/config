@@ -28,11 +28,12 @@ in {
       # Office
       "dropbox"
       "spotify"
+      "keybase"
 
       # Dev
       "alacritty"
     ];
 
-    taps = [ "homebrew/cask" "homebrew/cask-versions" "homebrew/cask-drivers"];
+    taps = [ "homebrew/cask" "homebrew/cask-versions" "homebrew/cask-drivers" ];
   };
 }
