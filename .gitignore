@@ -1,6 +1,9 @@
 # Resulting config
 /result
 
+# Podman
+/containers
+
 # Installed packages
 /bat
 /alacritty
