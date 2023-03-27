@@ -32,6 +32,7 @@ in {
 
       # Dev
       "alacritty"
+      "podman-desktop"
     ];
 
     taps = [ "homebrew/cask" "homebrew/cask-versions" "homebrew/cask-drivers" ];

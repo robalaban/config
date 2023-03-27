@@ -515,7 +515,7 @@
         {
           key = "Left";
           mods = "Alt";
-          chars = "\\x1b[1;3D";
+          chars = "\\x1BB";
         }
         {
           key = "Left";
@@ -540,7 +540,7 @@
         {
           key = "Right";
           mods = "Alt";
-          chars = "\\x1b[1;3C";
+          chars = "\\x1BF";
         }
         {
           key = "Right";
