@@ -29,10 +29,12 @@ in {
       "dropbox"
       "spotify"
       "keybase"
+      "microsoft-office"
 
       # Dev
       "alacritty"
       "podman-desktop"
+      "datagrip"
     ];
 
     taps = [ "homebrew/cask" "homebrew/cask-versions" "homebrew/cask-drivers" ];
