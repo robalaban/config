@@ -34,6 +34,7 @@ in {
       "alacritty"
       "podman-desktop"
       "datagrip"
+      "pycharm"
     ];
 
     taps = [ "homebrew/cask" "homebrew/cask-versions" "homebrew/cask-drivers" ];
