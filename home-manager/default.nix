@@ -33,7 +33,6 @@
       neovim
       difftastic
       podman
-      poetry
 
       # Useful nix related tools
       cachix # adding/managing alternative binary caches hosted by Cachix
