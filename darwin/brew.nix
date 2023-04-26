@@ -35,6 +35,7 @@ in {
       "podman-desktop"
       "datagrip"
       "pycharm"
+      "insomnia"
     ];
 
     taps = [ "homebrew/cask" "homebrew/cask-versions" "homebrew/cask-drivers" ];
