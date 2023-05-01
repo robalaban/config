@@ -36,6 +36,7 @@ in {
       "datagrip"
       "pycharm"
       "insomnia"
+      "karabiner-elements"
     ];
 
     taps = [ "homebrew/cask" "homebrew/cask-versions" "homebrew/cask-drivers" ];
