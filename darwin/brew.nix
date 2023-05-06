@@ -14,7 +14,7 @@ in {
     onActivation.cleanup = "zap";
     global.brewfile = true;
 
-    brews = [ "openssl" "openssl@1.1" "qemu" ];
+    brews = [ "openssl" "openssl@1.1" "qemu" "rust" ];
 
     casks = [
       # Utils
