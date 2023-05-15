@@ -5,7 +5,6 @@
       "editor.renderWhitespace" = "all";
       "files.autoSave" = "onFocusChange";
       "editor.rulers" = [ 80 120 ];
-      "telemetry.telemetryLevel" = "off";
       "editor.tabSize" = 2;
       "files.exclude" = { "**/node_modules/**" = true; };
       "editor.formatOnSave" = true;
@@ -44,6 +43,33 @@
         "plaintext" = false;
         "markdown" = true;
       };
+      # Disable telemetry + extra
+    	"clangd.checkUpdates" = false;
+    	"code-runner.enableAppInsights" = false;
+    	"docker-explorer.enableTelemetry" = false;
+    	"extensions.ignoreRecommendations" = true;
+    	"gitlens.showWelcomeOnInstall" = false;
+    	"gitlens.showWhatsNewAfterUpgrades" = false;
+    	"java.help.firstView" = "none";
+    	"java.help.showReleaseNotes" = false;
+    	"julia.enableTelemetry" = false;
+    	"kite.showWelcomeNotificationOnStartup" = false;
+    	"liveServer.settings.donotShowInfoMsg" = true;
+    	"Lua.telemetry.enable" = false;
+    	"material-icon-theme.showWelcomeMessage" = false;
+    	"pros.showWelcomeOnStartup" = false;
+    	"pros.useGoogleAnalytics" = false;
+    	"redhat.telemetry.enabled" = false;
+    	"rpcServer.showStartupMessage" = false;
+    	"shellcheck.disableVersionCheck" = true;
+    	"sonarlint.disableTelemetry" = true;
+    	"telemetry.enableCrashReporter" = false;
+    	"telemetry.enableTelemetry" = false;
+    	"telemetry.telemetryLevel" = "off";
+    	"terraform.telemetry.enabled" = false;
+    	"update.showReleaseNotes" = false;
+    	"vsicons.dontShowNewVersionMessage" = true;
+    	"workbench.welcomePage.walkthroughs.openOnInstall" = false;
     };
   };
 }
