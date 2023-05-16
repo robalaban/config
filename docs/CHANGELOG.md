@@ -4,6 +4,12 @@ All notable changes to the config will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
+## [0.0.4] - 2023-05-16
+
+### Changed
+
+- Brew autoupdtes when reloading env
+
 ## [0.0.3] - 2023-03-26
 
 ### Added

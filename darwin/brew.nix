@@ -12,6 +12,7 @@ in {
   homebrew = {
     enable = true;
     onActivation.cleanup = "zap";
+    onActivation.upgrade = true;
     global.brewfile = true;
 
     brews = [ "openssl" "openssl@1.1" "qemu" "rust" ];
