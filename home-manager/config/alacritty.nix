@@ -9,6 +9,8 @@
           lines = 0;
         };
 
+        option_as_alt = "Both";
+
         padding = {
           x = 6;
           y = 4;
@@ -238,7 +240,7 @@
       };
 
       # Send ESC (\x1b) before characters when alt is pressed.
-      alt_send_esc = false;
+      # alt_send_esc = false;
 
       # Key bindings
       #
