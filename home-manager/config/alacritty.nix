@@ -12,7 +12,7 @@
         option_as_alt = "Both";
 
         padding = {
-          x = 6;
+          x = 4;
           y = 4;
         };
 
@@ -21,6 +21,8 @@
 
         # Allow terminal applications to change Alacritty's window title.
         dynamic_title = true;
+
+        decorations = "Buttonless";
       };
 
       scrolling = { multiplier = 3; };
@@ -47,9 +49,9 @@
         # Default colors
         primary = {
           # hard contrast: background = '0x1d2021'
-          background = "#282a36";
+          background = "#000000";
           # soft contrast: background = '0x32302f'
-          foreground = "#f8f8f2";
+          foreground = "#c5c8c6";
           bright_foreground = "#ffffff";
         };
 
@@ -90,26 +92,26 @@
 
         # Normal colors
         normal = {
-          black = "#21222c";
-          red = "#ff5555";
-          green = "#50fa7b";
-          yellow = "#f1fa8c";
-          blue = "#bd93f9";
-          magenta = "#ff79c6";
-          cyan = "#8be9fd";
-          white = "#f8f8f2";
+          black = "#282A2E";
+          red = "#A54242";
+          green = "#8C9440";
+          yellow = "#DE935F";
+          blue = "#5F819D";
+          magenta = "#85678F";
+          cyan = "#5E8D87";
+          white = "#707880";
         };
 
         # Bright colors
         bright = {
-          black = "#6272a4";
-          red = "#ff6e6e";
-          green = "#69ff94";
-          yellow = "#ffffa5";
-          blue = "#d6acff";
-          magenta = "#ff92df";
-          cyan = "#a4ffff";
-          white = "#ffffff";
+          black = "#373B41";
+          red = "#CC6666";
+          green = "#B5BD68";
+          yellow = "#F0C674";
+          blue = "#81A2BE";
+          magenta = "#B294BB";
+          cyan = "#8ABEB7";
+          white = "#C5C8C6";
         };
       };
 
