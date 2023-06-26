@@ -27,6 +27,8 @@
     extraConfig = {
       core = { ignorecase = "false"; };
 
+      init = { defaultBranch = "main"; };
+
       pull = { rebase = false; };
 
       diff = {
