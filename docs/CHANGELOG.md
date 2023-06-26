@@ -4,6 +4,27 @@ All notable changes to the config will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
+## [0.0.5] - 2023-06-26
+
+
+### Changed
+
+- chore: add main as default branch in git
+- fix: alacrity alt_send_esc
+- fix: removed poetry - managing python env from flakes
+
+### Added
+
+- feat: add zed
+- feat: alacritty update
+- feat: auto-update brew on env change
+- feat: disable vscode telemetry + extras
+- feat: add rust + dev specifics
+- feat: add karabiner elements
+- feat: add insomnia
+- feat: add wrangler
+
+
 ## [0.0.4] - 2023-05-16
 
 ### Changed
