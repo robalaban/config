@@ -13,6 +13,7 @@
     ./config/zsh.nix
     ./config/vscode/default.nix
     ./config/git.nix
+    ./config/helix.nix
   ];
 
   home.packages = with pkgs;
