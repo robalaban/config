@@ -29,6 +29,7 @@ in {
       "dropbox"
       "spotify"
       "microsoft-office"
+      "obsidian"
 
       # Dev
       "alacritty"
