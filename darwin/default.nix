@@ -50,6 +50,7 @@ in {
   # Issue: https://github.com/nix-community/home-manager/issues/1341
   environment.systemPackages = with pkgs;
     [
+      tailscale
       # terminal-notifier
     ];
 
@@ -66,6 +67,9 @@ in {
   # Keyboard
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToEscape = true;
+
+  # Tailscale
+  services.tailscale.enable = true;
 
   # Add ability to used TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;

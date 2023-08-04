@@ -30,6 +30,7 @@ in {
       "spotify"
       "microsoft-office"
       "obsidian"
+      "mullvadvpn"
 
       # Dev
       "alacritty"
@@ -39,6 +40,7 @@ in {
       "pycharm"
       "insomnia"
       "karabiner-elements"
+      "balenaetcher"
     ];
 
     taps = [ "homebrew/cask" "homebrew/cask-versions" "homebrew/cask-drivers" ];
