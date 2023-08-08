@@ -21,7 +21,6 @@ in {
       # Utils
       "1password"
       "raycast"
-      "google-chrome"
       "rectangle"
       "alt-tab"
 
