@@ -37,6 +37,7 @@
       wrangler
       cmake
       protobuf
+      ffmpeg
 
       # Useful nix related tools
       cachix # adding/managing alternative binary caches hosted by Cachix

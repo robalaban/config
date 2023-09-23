@@ -23,6 +23,7 @@ in {
       "raycast"
       "rectangle"
       "alt-tab"
+      "vlc"
 
       # Office
       "dropbox"
@@ -30,6 +31,7 @@ in {
       "microsoft-office"
       "obsidian"
       "mullvadvpn"
+      "slack"
 
       # Dev
       "alacritty"
