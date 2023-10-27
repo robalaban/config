@@ -15,7 +15,7 @@ in {
     onActivation.upgrade = true;
     global.brewfile = true;
 
-    brews = [ "openssl" "openssl@1.1" "qemu" "rust" ];
+    brews = [ "openssl" "openssl@1.1" "qemu" "rust" "stockfish" ];
 
     casks = [
       # Utils
