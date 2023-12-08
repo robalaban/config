@@ -24,6 +24,7 @@ in {
       "rectangle"
       "alt-tab"
       "vlc"
+      "dozer"
 
       # Office
       "dropbox"

@@ -22,6 +22,7 @@
       "workbench.colorTheme" = "Dracula";
       "workbench.iconTheme" = "material-icon-theme";
       "editor.inlineSuggest.enabled" = true;
+      "workbench.sideBar.location" = "right";
       "search.exclude" = {
         "**/.cache" = true;
         "**/.next" = true;

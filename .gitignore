@@ -14,3 +14,7 @@ github-copilot
 /tmux
 starship.toml
 /karabiner
+
+# Zed
+/zed/*
+!/zed/settings.json
