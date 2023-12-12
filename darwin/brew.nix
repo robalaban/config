@@ -24,7 +24,7 @@ in {
       "rectangle"
       "alt-tab"
       "vlc"
-      "dozer"
+      "dbeaver-community"
 
       # Office
       "dropbox"
