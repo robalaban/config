@@ -33,7 +33,6 @@
       nixfmt
       neovim
       difftastic
-      podman
       wrangler
       cmake
       protobuf

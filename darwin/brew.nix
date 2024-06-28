@@ -37,7 +37,6 @@ in {
       # Dev
       "alacritty"
       "zed"
-      "podman-desktop"
       "datagrip"
       "pycharm"
       "insomnia"
