@@ -50,3 +50,33 @@ This repository is inspired by a lot of folks who have taken time to share their
 # remove unused references / old-generations
 nix-collect-garbage -d
 ```
+
+## Rebuilding the System
+
+After making changes to the configuration, you need to rebuild the system to apply these changes. There are two ways to do this:
+
+### Manual Rebuild
+
+1. Build the configuration:
+   ```
+   nix build .#darwinConfigurations.robert.system
+   ```
+
+2. Switch to the new configuration:
+   ```
+   ./result/sw/bin/darwin-rebuild switch --flake .#robert
+   ```
+
+### Using the Rebuild Script
+
+For convenience, a rebuild script is provided that combines the build and switch steps:
+
+1. Ensure the script is executable:
+   ```
+   chmod +x rebuild.sh
+   ```
+
+2. Run the script:
+   ```
+   ./rebuild.sh
+   ```

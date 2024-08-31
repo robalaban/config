@@ -44,6 +44,6 @@ in {
       "balenaetcher"
     ];
 
-    taps = [ "homebrew/cask" "homebrew/cask-versions" "homebrew/cask-drivers" ];
+    taps = [ "homebrew/cask-versions" "homebrew/cask-drivers" ];
   };
 }
