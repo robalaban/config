@@ -80,3 +80,26 @@ For convenience, a rebuild script is provided that combines the build and switch
    ```
    ./rebuild.sh
    ```
+
+## Updating Nix
+
+To update Nix to the latest version available in your current Nixpkgs channel:
+
+1. Update your flake inputs:
+   ```bash
+   nix flake update
+   ```
+
+2. Rebuild your system:
+   ```bash
+   ./rebuild.sh
+   ```
+
+3. Verify the new Nix version:
+   ```bash
+   nix --version
+   ```
+
+### Specifying a Nix Version
+
+If you want to use a specific version of Nix, modify the `darwin/default.nix` file:

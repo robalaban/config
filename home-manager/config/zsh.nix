@@ -1,10 +1,13 @@
 { pkgs, ... }: {
   programs.zsh = {
     enable = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting = {
+      enable = true;
+    };
     enableCompletion = true;
-    enableAutosuggestions = true;
-
+    autosuggestion = {
+      enable = true;
+    };
     history = {
       size = 100000;
       save = 2000000;
