@@ -38,6 +38,7 @@ in {
       "alacritty"
       "zed"
       "datagrip"
+      "intellij-idea"
       "pycharm"
       "insomnia"
       "karabiner-elements"
