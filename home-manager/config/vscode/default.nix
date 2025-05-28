@@ -1,8 +1,6 @@
 { config, pkgs, ... }: {
-  programs.vscode = {
-    enable = true;
-    userSettings = {
-      "editor.renderWhitespace" = "all";
+  programs.vscode.profiles.default.userSettings = {
+    "editor.renderWhitespace" = "all";
       "files.autoSave" = "onFocusChange";
       "editor.rulers" = [ 80 120 ];
       "editor.tabSize" = 2;
@@ -71,6 +69,5 @@
     	"update.showReleaseNotes" = false;
     	"vsicons.dontShowNewVersionMessage" = true;
     	"workbench.welcomePage.walkthroughs.openOnInstall" = false;
-    };
   };
 }

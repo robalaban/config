@@ -15,8 +15,7 @@ in {
         [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
       trusted-users = [ "@admin" ];
     };
-    configureBuildUsers = true;
-    package = pkgs.nixFlakes;
+    package = pkgs.nixVersions.stable;
     extraOptions = ''
       auto-optimise-store = true
       experimental-features = nix-command flakes
@@ -42,9 +41,6 @@ in {
   # Create /etc/bashrc that loads the nix-darwin environment.
   programs.zsh.enable = true;
 
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
-
   # Apps
   # `home-manager` currently has issues adding them to `~/Applications`
   # Issue: https://github.com/nix-community/home-manager/issues/1341
@@ -52,6 +48,12 @@ in {
     [
       tailscale
       # terminal-notifier
+      # Shell
+      zsh
+      zsh-autosuggestions
+      zsh-nix-shell
+      zsh-syntax-highlighting
+      zsh-autocomplete
     ];
 
   programs = { nix-index = { enable = true; }; };
@@ -59,8 +61,13 @@ in {
   # Fonts
   fonts.packages = with pkgs; [
     recursive
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    nerd-fonts.jetbrains-mono
   ];
+
+  system = {
+    stateVersion = 2;
+    primaryUser = "robert";
+  };
 
   # Keyboard
   system.keyboard.enableKeyMapping = true;
@@ -70,5 +77,5 @@ in {
   services.tailscale.enable = true;
 
   # Add ability to used TouchID for sudo authentication
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 }

@@ -28,12 +28,8 @@
       # Dev stuff
       # (agda.withPackages (p: [ p.standard-library ]))
       jq
-      nodePackages.typescript
-      nodejs
       nixfmt-classic
-      neovim
       difftastic
-      wrangler
       cmake
       protobuf
       ffmpeg

@@ -4,12 +4,12 @@
     # base imports
     utils.url = "github:numtide/flake-utils";
 
-    # nixos/nix-darwin dependencies
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-24.05-darwin";
+    # system.stateVersionos/nix-darwin dependencies
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     darwin = {
@@ -64,7 +64,7 @@
         apple-silicon = final: prev:
           optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
             # Add access to x86 packages system is running Apple Silicon
-            pkgs-x86 = import inputs.nixpkgs-unstable {
+            pkgs-x86 = import inputs.nixpkgs-master {
               system = "x86_64-darwin";
               inherit (nixpkgsConfig) config;
             };

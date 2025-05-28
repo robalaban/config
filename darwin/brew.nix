@@ -35,17 +35,13 @@ in {
       "slack"
 
       # Dev
-      "alacritty"
       "zed"
       "datagrip"
       "intellij-idea"
       "pycharm"
       "insomnia"
       "karabiner-elements"
-      "balenaetcher"
       "ghostty"
     ];
-
-    taps = [ "homebrew/cask-versions" "homebrew/cask-drivers" ];
   };
 }
