@@ -31,7 +31,6 @@ in {
       "spotify"
       "microsoft-office"
       "obsidian"
-      "mullvadvpn"
       "slack"
 
       # Dev
