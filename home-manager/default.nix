@@ -37,8 +37,10 @@
       cachix # adding/managing alternative binary caches hosted by Cachix
       niv # easy dependency management for nix projects
 
-      # NPM packages
-      nodePackages.claude-code
+      # Custom npm packages
+      (pkgs.writeShellScriptBin "claude" ''
+        ${pkgs.nodejs_22}/bin/npx @anthropic-ai/claude-code "$@"
+      '')
 
     ] ++ lib.optionals stdenv.isDarwin [
       m-cli # useful macOS CLI commands
