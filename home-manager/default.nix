@@ -8,7 +8,6 @@
   home.stateVersion = "22.11";
 
   imports = [
-    ./config/alacritty.nix
     ./config/starship.nix
     ./config/zsh.nix
     ./config/vscode/default.nix
