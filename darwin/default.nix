@@ -47,6 +47,7 @@ in {
   environment.systemPackages = with pkgs;
     [
       tailscale
+      nodejs_22
       # terminal-notifier
       # Shell
       zsh
