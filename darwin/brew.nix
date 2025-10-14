@@ -41,6 +41,7 @@ in {
       "insomnia"
       "karabiner-elements"
       "ghostty"
+      "claude-code"
     ];
   };
 }
