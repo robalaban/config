@@ -15,16 +15,18 @@ in {
     onActivation.upgrade = true;
     global.brewfile = true;
 
-    brews = [ "openssl" "openssl@1.1" "qemu" "rust" "stockfish" ];
+    taps = [ "nikitabobko/tap" ];
+
+    brews = [ "openssl" "openssl@1.1" "qemu" "rust" "awscli" ];
 
     casks = [
       # Utils
       "1password"
       "raycast"
-      "rectangle"
       "alt-tab"
       "vlc"
       "dbeaver-community"
+      "nikitabobko/tap/aerospace"
 
       # Office
       "dropbox"
