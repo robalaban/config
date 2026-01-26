@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Read(//nix/store/**)",
+      "Read(//Users/robert/Applications/**)",
+      "Bash(nix-store:*)",
+      "Read(//etc/profiles/per-user/robert/bin/**)",
+      "Bash(readlink:*)",
+      "Bash(./rebuild.sh)",
+      "Bash(xargs:*)",
+      "Bash(sudo ./result/activate:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,5 +1,9 @@
 { config, pkgs, ... }: {
-  programs.vscode.profiles.default.userSettings = {
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode;
+
+    profiles.default.userSettings = {
     "editor.renderWhitespace" = "all";
       "files.autoSave" = "onFocusChange";
       "editor.rulers" = [ 80 120 ];
@@ -69,5 +73,6 @@
     	"update.showReleaseNotes" = false;
     	"vsicons.dontShowNewVersionMessage" = true;
     	"workbench.welcomePage.walkthroughs.openOnInstall" = false;
+    };
   };
 }

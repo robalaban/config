@@ -26,6 +26,7 @@
 
       # Dev stuff
       # (agda.withPackages (p: [ p.standard-library ]))
+      vscode
       jq
       nixfmt-classic
       difftastic
