@@ -36,6 +36,7 @@ in {
       "slack"
 
       # Dev
+      "visual-studio-code"
       "zed"
       "datagrip"
       "intellij-idea"
