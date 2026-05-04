@@ -7,9 +7,7 @@
       "Bash(nix-store:*)",
       "Read(//etc/profiles/per-user/robert/bin/**)",
       "Bash(readlink:*)",
-      "Bash(./rebuild.sh)",
-      "Bash(xargs:*)",
-      "Bash(sudo ./result/activate:*)"
+      "Bash(./rebuild.sh)"
     ],
     "deny": [],
     "ask": []

@@ -13,6 +13,7 @@
     ./config/vscode/default.nix
     ./config/git.nix
     ./config/helix.nix
+    ./config/pi.nix
   ];
 
   home.packages = with pkgs;
@@ -36,6 +37,9 @@
       # Useful nix related tools
       cachix # adding/managing alternative binary caches hosted by Cachix
       niv # easy dependency management for nix projects
+
+      # AI coding agents
+      pi
 
       # Custom npm packages
       (pkgs.writeShellScriptBin "claude" ''

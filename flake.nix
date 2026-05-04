@@ -16,6 +16,7 @@
       url = "github:lnl7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    llm-agents.url = "github:numtide/llm-agents.nix";
   };
 
   outputs =
@@ -69,6 +70,9 @@
               inherit (nixpkgsConfig) config;
             };
           };
+        llm-agents = final: prev: {
+          pi = inputs.llm-agents.packages.${prev.stdenv.system}.pi;
+        };
       };
     };
 }

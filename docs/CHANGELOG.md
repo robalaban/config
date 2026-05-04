@@ -4,6 +4,14 @@ All notable changes to the config will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
+## [0.0.7] - 2026-05-04
+
+
+### Added
+
+- feat: add pi coding agent (pi.dev) via numtide/llm-agents.nix flake
+- feat: declarative pi extensions/skills/prompts under `pi/`, symlinked into `~/.pi/agent/` via home-manager
+
 ## [0.0.6] - 2025-05-28
 
 
