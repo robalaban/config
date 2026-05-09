@@ -45,6 +45,7 @@ in {
       "karabiner-elements"
       "ghostty"
       "claude-code"
+      "codex-app"
     ];
   };
 }
