@@ -8,7 +8,9 @@
       "Read(//etc/profiles/per-user/robert/bin/**)",
       "Bash(readlink:*)",
       "Bash(./rebuild.sh)",
-      "Bash(brew search *)"
+      "Bash(brew search *)",
+      "Bash(git -C /Users/robert/.config ls-files)",
+      "Bash(ln -s AGENTS.md CLAUDE.md)"
     ],
     "deny": [],
     "ask": []

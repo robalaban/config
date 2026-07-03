@@ -28,7 +28,7 @@
       # Dev stuff
       # (agda.withPackages (p: [ p.standard-library ]))
       jq
-      nixfmt-classic
+      nixfmt
       difftastic
       cmake
       protobuf
