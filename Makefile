@@ -2,7 +2,7 @@
 
 rebuild:
 	nix build .#darwinConfigurations.robert.system
-	./result/sw/bin/darwin-rebuild switch --flake .#robert
+	sudo ./result/sw/bin/darwin-rebuild switch --flake .#robert
 
 clean:
 	nix-collect-garbage -d
