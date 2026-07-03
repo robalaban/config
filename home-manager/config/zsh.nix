@@ -24,6 +24,16 @@
       src = "${pkgs.zsh-nix-shell}/share/zsh-nix-shell";
     }];
 
+    # Login-shell setup, written to ~/.zprofile.
+    # brew shellenv is handled by environment.shellInit in darwin/brew.nix.
+    profileExtra = ''
+      # ~/.local/bin — uv/uvx
+      export PATH="$PATH:$HOME/.local/bin"
+
+      # Obsidian CLI
+      export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
+    '';
+
     initContent = ''
       # Detect which `ls` flavor is in use
       if ls --color > /dev/null 2>&1; then # GNU `ls`

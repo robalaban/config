@@ -54,6 +54,7 @@
                 nixpkgs = nixpkgsConfig;
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
+                home-manager.backupFileExtension = "backup";
                 users.users.${primaryUser}.home = "/Users/${primaryUser}";
                 home-manager.users.robert = import ./home-manager;
               })

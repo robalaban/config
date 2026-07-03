@@ -20,5 +20,6 @@ starship.toml
 /zed/*
 !/zed/settings.json
 
-/claude/*
-!/claude/settings.json
+# Claude Code — commit shared defaults, keep personal approvals local
+/.claude/*
+!/.claude/settings.json
