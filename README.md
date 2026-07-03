@@ -13,15 +13,16 @@ Install nix using the [official docs](https://nixos.org/download.html#nix-instal
 ## Project Structure
 
 ```shell
-├── configuration.nix
+├── flake.nix # entry point
 ├── darwin # everything related to MacOS
+│   ├── aerospace.toml # AeroSpace window manager config
 │   ├── brew.nix # brew packages - GUI apps
 │   ├── default.nix # system configuration
 │   ├── preferences.nix # system preferences
 ├── home-manager # dotfiles
 │   ├── config # all the dotfiles configuration
-│   │   ├── alacritty.nix
 │   │   ├── git.nix
+│   │   ├── helix.nix
 │   │   ├── starship.nix
 │   │   ├── vscode # VSCode configuration
 │   │   │   └── default.nix
@@ -67,19 +68,13 @@ After making changes to the configuration, you need to rebuild the system to app
    ./result/sw/bin/darwin-rebuild switch --flake .#robert
    ```
 
-### Using the Rebuild Script
+### Using the Makefile
 
-For convenience, a rebuild script is provided that combines the build and switch steps:
+For convenience, a Makefile target combines the build and switch steps:
 
-1. Ensure the script is executable:
-   ```
-   chmod +x rebuild.sh
-   ```
-
-2. Run the script:
-   ```
-   ./rebuild.sh
-   ```
+```
+make rebuild
+```
 
 ## Updating Nix
 
@@ -92,7 +87,7 @@ To update Nix to the latest version available in your current Nixpkgs channel:
 
 2. Rebuild your system:
    ```bash
-   ./rebuild.sh
+   make rebuild
    ```
 
 3. Verify the new Nix version:

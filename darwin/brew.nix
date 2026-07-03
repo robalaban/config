@@ -1,10 +1,9 @@
 { config, ... }:
 
-# Using Brew until nix-darwin is patched and working with
-# /Application folder
+# GUI apps are managed via Homebrew casks — nixpkgs support for
+# /Applications on macOS is still second-class.
 
-let user_name = "robert";
-in {
+{
   environment.shellInit = ''
     eval "$(${config.homebrew.brewPrefix}/brew shellenv)"
   '';
@@ -17,7 +16,11 @@ in {
 
     taps = [ "nikitabobko/tap" ];
 
-    brews = [ "openssl" "openssl@1.1" "qemu" "rust" "awscli" ];
+    brews = [
+      "openssl"
+      "qemu"
+      "awscli"
+    ];
 
     casks = [
       # Utils

@@ -18,11 +18,13 @@
       plugins = [ "history" ];
     };
 
-    plugins = [{
-      name = "nix-shell";
-      file = "nix-shell.plugin.zsh";
-      src = "${pkgs.zsh-nix-shell}/share/zsh-nix-shell";
-    }];
+    plugins = [
+      {
+        name = "nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = "${pkgs.zsh-nix-shell}/share/zsh-nix-shell";
+      }
+    ];
 
     # Login-shell setup, written to ~/.zprofile.
     # brew shellenv is handled by environment.shellInit in darwin/brew.nix.
@@ -47,7 +49,6 @@
       alias ls="command ls ''${colorflag}"
       # More colors!!!111
       export TERM='xterm-256color';
-      export PATH="$PATH:/opt/homebrew/bin";
     '';
 
     shellAliases = {
@@ -69,6 +70,8 @@
       dl = "$HOME/Downloads";
     };
 
-    sessionVariables = { LANG = "en_US.UTF-8"; };
+    sessionVariables = {
+      LANG = "en_US.UTF-8";
+    };
   };
 }

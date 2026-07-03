@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 # Home-manager resources
 # https://github.com/mjstewart/nix-home-manager
@@ -13,10 +18,13 @@
     ./config/vscode/default.nix
     ./config/git.nix
     ./config/helix.nix
-    ./config/pi.nix
   ];
 
-  home.packages = with pkgs;
+  # AeroSpace reads ~/.aerospace.toml; keep the config version-controlled
+  home.file.".aerospace.toml".source = ../darwin/aerospace.toml;
+
+  home.packages =
+    with pkgs;
     [
       # Some basics
       coreutils
@@ -30,6 +38,7 @@
       jq
       nixfmt
       difftastic
+      neovim
       cmake
       protobuf
       ffmpeg
@@ -38,22 +47,19 @@
       cachix # adding/managing alternative binary caches hosted by Cachix
       niv # easy dependency management for nix projects
 
-      # AI coding agents
-      pi
-
-      # Custom npm packages
-      (pkgs.writeShellScriptBin "claude" ''
-        ${pkgs.nodejs_22}/bin/npx @anthropic-ai/claude-code "$@"
-      '')
-
-    ] ++ lib.optionals stdenv.isDarwin [
+    ]
+    ++ lib.optionals stdenv.isDarwin [
       m-cli # useful macOS CLI commands
     ];
 
   programs = {
-    home-manager = { enable = true; };
+    home-manager = {
+      enable = true;
+    };
     direnv = {
-      nix-direnv = { enable = true; };
+      nix-direnv = {
+        enable = true;
+      };
       enable = true;
     };
     bat = {
@@ -63,8 +69,12 @@
     fzf = {
       enable = true;
       enableZshIntegration = true;
-      defaultOptions =
-        [ "--height 40%" "--layout=reverse" "--border" "--inline-info" ];
+      defaultOptions = [
+        "--height 40%"
+        "--layout=reverse"
+        "--border"
+        "--inline-info"
+      ];
     };
     htop = {
       enable = true;

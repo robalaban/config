@@ -4,6 +4,28 @@ All notable changes to the config will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
+## [0.0.8] - 2026-07-03
+
+### Added
+
+- feat: add neovim (git diff/merge tools and vim aliases pointed at it but it was never installed)
+- feat: AGENTS.md project memory (CLAUDE.md symlink) for coding agents
+- feat: manage `~/.aerospace.toml` declaratively via home-manager
+
+### Changed
+
+- fix: home-manager deprecations — `programs.git.extraConfig`/`userName`/`userEmail`/`aliases` moved under `programs.git.settings`, `nixfmt-classic` → `nixfmt`, `pkgs.system` → `pkgs.stdenv.hostPlatform.system`
+- fix: `darwin-rebuild switch` now runs under sudo (required by newer nix-darwin)
+- fix: set `home-manager.backupFileExtension` so existing dotfiles are backed up instead of aborting activation; migrated hand-written `~/.zprofile` PATH entries into zsh.nix
+
+### Removed
+
+- chore: audit cleanup — unused flake inputs (`utils`, `nixpkgs-darwin`, `nixpkgs-master`), dead x86 overlay, empty `spacebar.nix`, unsourced zsh plugin packages, redundant homebrew PATH export, `rebuild.sh` (use `make rebuild`)
+- chore: remove pi coding agent (`llm-agents` input, overlay, `pi/` scaffolding)
+- chore: remove npx-based `claude` wrapper (shadowed by the `claude-code` cask)
+- chore: remove EOL `openssl@1.1` brew and brew-managed `rust` (per-project flakes instead)
+- chore: remove pipx/poetry/cursor-agent leftovers from `~/.local/bin`
+
 ## [0.0.7] - 2026-05-04
 
 
