@@ -27,8 +27,10 @@
     ];
 
     # Login-shell setup, written to ~/.zprofile.
-    # brew shellenv is handled by environment.shellInit in darwin/brew.nix.
     profileExtra = ''
+      # Homebrew — puts /opt/homebrew/bin on PATH (code, claude, etc.)
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+
       # ~/.local/bin — uv/uvx
       export PATH="$PATH:$HOME/.local/bin"
 

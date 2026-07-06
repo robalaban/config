@@ -23,6 +23,14 @@
   # AeroSpace reads ~/.aerospace.toml; keep the config version-controlled
   home.file.".aerospace.toml".source = ../darwin/aerospace.toml;
 
+  # Homebrew 6 requires third-party taps to be trusted (`brew trust`).
+  # brew bundle (run during darwin activation as robert) reads
+  # ~/.homebrew/trust.json. Keep in sync with homebrew.taps in darwin/brew.nix.
+  home.file.".homebrew/trust.json" = {
+    text = builtins.toJSON { trustedtaps = [ "nikitabobko/tap" ]; };
+    force = true;
+  };
+
   home.packages =
     with pkgs;
     [
