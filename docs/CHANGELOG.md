@@ -4,6 +4,17 @@ All notable changes to the config will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
+## [0.0.9] - 2026-08-06
+
+### Added
+
+- feat: multi-host support — one `darwinConfigurations` entry per machine (`robert` for personal, `robert-work`) built by a shared `mkHost` helper; per-machine config lives in `hosts/personal.nix` / `hosts/work.nix`
+- feat: hostnames are now managed by nix-darwin (`networking.hostName`/`localHostName`/`computerName`), named to match the flake attributes so `darwin-rebuild switch --flake .` auto-selects the right host
+
+### Changed
+
+- fix: `make rebuild` auto-detects the host via `scutil --get LocalHostName`; one-time bootstrap on the work machine before it's renamed: `make rebuild HOST=robert-work`
+
 ## [0.0.8] - 2026-07-03
 
 ### Added

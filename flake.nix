@@ -20,13 +20,16 @@
       home-manager,
       ...
     }:
-    {
-      darwinConfigurations = {
-        robert = darwin.lib.darwinSystem {
+    let
+      mkHost =
+        hostModule:
+        darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
             # Main `nix-darwin` config
             ./darwin
+            # Per-host config (personal vs work)
+            hostModule
             # `home-manager` module
             home-manager.darwinModules.home-manager
             (
@@ -50,6 +53,13 @@
             )
           ];
         };
+    in
+    {
+      # Attribute names match each machine's LocalHostName so that
+      # `darwin-rebuild switch --flake .` auto-selects the right one.
+      darwinConfigurations = {
+        robert = mkHost ./hosts/personal.nix;
+        robert-work = mkHost ./hosts/work.nix;
       };
     };
 }
