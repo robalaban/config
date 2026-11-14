@@ -14,7 +14,15 @@
     onActivation.upgrade = true;
     global.brewfile = true;
 
-    taps = [ "nikitabobko/tap" ];
+    # Homebrew 6+ refuses untrusted third-party taps; nix-darwin marks them
+    # `trusted: true` in the Brewfile and brew records that in ~/.homebrew/trust.json
+    # (which must stay a regular, brew-writable file — don't manage it with home-manager).
+    taps = [
+      {
+        name = "nikitabobko/tap";
+        trusted = true;
+      }
+    ];
 
     brews = [
       "openssl"
@@ -47,7 +55,8 @@
       "insomnia"
       "karabiner-elements"
       "ghostty"
-      "claude-code"
+      "claude-code@latest"
+      "codex"
       "codex-app"
     ];
   };
