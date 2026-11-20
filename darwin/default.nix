@@ -1,17 +1,4 @@
-{
-  inputs,
-  config,
-  pkgs,
-  lib,
-  ...
-}:
-let
-  apps = pkgs.buildEnv {
-    name = "home-manager-applications";
-    paths = config.home.packages;
-    pathsToLink = "/Applications";
-  };
-in
+{ pkgs, ... }:
 {
   imports = [
     ./brew.nix
@@ -19,19 +6,28 @@ in
   ];
 
   nix = {
+    # cache.nixos.org and its key are nix defaults — no need to list them.
     settings = {
-      substituters = [ "https://cache.nixos.org/" ];
-      trusted-public-keys = [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
       trusted-users = [ "@admin" ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      extra-platforms = [
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
     };
     package = pkgs.nixVersions.stable;
-    extraOptions = ''
-      auto-optimise-store = true
-      experimental-features = nix-command flakes
-    ''
-    + lib.optionalString (pkgs.stdenv.hostPlatform.system == "aarch64-darwin") ''
-      extra-platforms = x86_64-darwin aarch64-darwin
-    '';
+
+    # Keep /nix/store from growing unbounded: weekly, drop generations older
+    # than 30 days and hard-link duplicate files. (`auto-optimise-store` is
+    # avoided — optimising during builds is known to corrupt the store on macOS.)
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 30d";
+    };
+    optimise.automatic = true;
   };
 
   users.users.robert = {
@@ -54,24 +50,21 @@ in
     ];
   };
 
-  # Create /etc/bashrc that loads the nix-darwin environment.
-  programs.zsh.enable = true;
-
-  # Apps
-  # `home-manager` currently has issues adding them to `~/Applications`
-  # Issue: https://github.com/nix-community/home-manager/issues/1341
-  environment.systemPackages = with pkgs; [
-    tailscale
-    nodejs_22
-    # Shell (plugins are wired up by home-manager's programs.zsh)
-    zsh
-  ];
-
-  programs = {
-    nix-index = {
-      enable = true;
-    };
+  # Create /etc/zshenv etc. that load the nix-darwin environment.
+  # Completion and prompt are set up by home-manager (oh-my-zsh + starship);
+  # doing it here too would run compinit twice on every shell start.
+  programs.zsh = {
+    enable = true;
+    enableCompletion = false;
+    enableBashCompletion = false;
+    promptInit = "";
   };
+
+  # zsh itself comes from home-manager's programs.zsh, tailscale from
+  # services.tailscale below.
+  environment.systemPackages = with pkgs; [
+    nodejs_22
+  ];
 
   # Fonts
   fonts.packages = with pkgs; [

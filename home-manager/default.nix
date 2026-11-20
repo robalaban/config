@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ pkgs, lib, ... }:
 
 # Home-manager resources
 # https://github.com/mjstewart/nix-home-manager
@@ -43,13 +38,8 @@
       protobuf
       ffmpeg
       rtk # Rust Token Killer: compresses shell output for coding agents (hooks: `rtk init -g`)
-
-      # Useful nix related tools
-      cachix # adding/managing alternative binary caches hosted by Cachix
-      niv # easy dependency management for nix projects
-
     ]
-    ++ lib.optionals stdenv.isDarwin [
+    ++ lib.optionals stdenv.hostPlatform.isDarwin [
       m-cli # useful macOS CLI commands
     ];
 

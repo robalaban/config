@@ -15,7 +15,7 @@ Note: `~/.config` also contains runtime config written by apps (e.g. `karabiner/
 | `make rebuild` | Build the config and `sudo darwin-rebuild switch` to apply it. Host is auto-detected from `scutil --get LocalHostName`; override with `make rebuild HOST=robert-work` (needed once on a freshly renamed machine) |
 | `nix build .#darwinConfigurations.robert.system` | Build only — the "test" to run before/after changes, without applying anything (swap in `robert-work` to check the other host) |
 | `make update` | Update all flake inputs (`nix flake update`) |
-| `make clean` | Garbage-collect old generations (`nix-collect-garbage -d`) |
+| `make clean` | Delete all old generations, user and system, and garbage-collect the store (`nix-collect-garbage -d`, with and without sudo) |
 | `make upgrade` | Upgrade Nix itself |
 | `nixfmt` | Format `.nix` files |
 

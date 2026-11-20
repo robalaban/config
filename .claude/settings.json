@@ -17,7 +17,6 @@
     ],
     "deny": [],
     "ask": [
-      "Bash(./rebuild.sh)",
       "Bash(make rebuild)"
     ]
   }

@@ -1,13 +1,9 @@
-{ config, ... }:
+{ ... }:
 
 # GUI apps are managed via Homebrew casks — nixpkgs support for
 # /Applications on macOS is still second-class.
 
 {
-  environment.shellInit = ''
-    eval "$(${config.homebrew.brewPrefix}/brew shellenv)"
-  '';
-
   homebrew = {
     enable = true;
     onActivation.cleanup = "zap";
@@ -49,9 +45,7 @@
       # Dev
       "visual-studio-code"
       "zed"
-      "datagrip"
-      "intellij-idea"
-      "pycharm"
+      "sublime-text"
       "insomnia"
       "karabiner-elements"
       "ghostty"

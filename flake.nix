@@ -13,10 +13,8 @@
   };
 
   outputs =
-    inputs@{
-      self,
+    {
       darwin,
-      nixpkgs,
       home-manager,
       ...
     }:
@@ -32,25 +30,13 @@
             hostModule
             # `home-manager` module
             home-manager.darwinModules.home-manager
-            (
-              {
-                config,
-                lib,
-                pkgs,
-                ...
-              }:
-              let
-                primaryUser = "robert";
-              in
-              {
-                nixpkgs.config.allowUnfree = true;
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.backupFileExtension = "backup";
-                users.users.${primaryUser}.home = "/Users/${primaryUser}";
-                home-manager.users.${primaryUser} = import ./home-manager;
-              }
-            )
+            {
+              nixpkgs.config.allowUnfree = true;
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
+              home-manager.users.robert = import ./home-manager;
+            }
           ];
         };
     in

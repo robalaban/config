@@ -4,15 +4,6 @@ let
   homeDir = config.users.users.${config.system.primaryUser}.home;
 in
 {
-  system.activationScripts.postActivation.text = ''
-    # Stop iTunes from responding to the keyboard media keys
-    launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2>/dev/null
-
-    # Use list view in all Finder windows by default
-    # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-    defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-  '';
-
   system.defaults = {
     dock = {
       mru-spaces = false;
@@ -26,6 +17,8 @@ in
       AppleShowAllExtensions = true;
       _FXShowPosixPathInTitle = true;
       FXEnableExtensionChangeWarning = false;
+      # List view in all Finder windows by default
+      FXPreferredViewStyle = "Nlsv";
     };
 
     trackpad = {

@@ -4,6 +4,22 @@ All notable changes to the config will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
+## [0.0.10] - 2026-11-20
+
+### Added
+
+- feat: add Sublime Text cask (the cask also links `subl` into `/opt/homebrew/bin`)
+
+### Changed
+
+- removed DataGrip, IntelliJ IDEA and PyCharm casks (unused; their multi-GB upgrades made `make rebuild` very slow)
+- fix: `make clean` also runs under sudo, so it removes old system generations instead of only user ones
+- fix: `stdenv.isDarwin` → `stdenv.hostPlatform.isDarwin` deprecation warning
+- perf: weekly automatic `nix.gc` (generations older than 30 days) and `nix.optimise`; replaces `auto-optimise-store`, which is unsafe on macOS
+- perf: faster shell startup — nix-darwin no longer runs its own `compinit`/`promptinit` on top of oh-my-zsh + starship
+- fix: Finder list view is now set via `system.defaults.finder.FXPreferredViewStyle` (the activation script ran as root and no longer affected the user)
+- cleanup: removed unused `nix-index`, `niv`, `cachix`, the oh-my-zsh `history` plugin, redundant `zsh`/`tailscale` system packages, duplicated nix cache settings, dead VS Code settings for uninstalled extensions, and dead code in `flake.nix` / `darwin/default.nix` / `darwin/brew.nix`
+
 ## [0.0.9] - 2026-08-06
 
 ### Added

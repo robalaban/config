@@ -14,6 +14,9 @@ Install nix using the [official docs](https://nixos.org/download.html#nix-instal
 
 ```shell
 ├── flake.nix # entry point
+├── hosts # per-machine config
+│   ├── personal.nix
+│   └── work.nix
 ├── darwin # everything related to MacOS
 │   ├── aerospace.toml # AeroSpace window manager config
 │   ├── brew.nix # brew packages - GUI apps
@@ -47,9 +50,11 @@ This repository is inspired by a lot of folks who have taken time to share their
 
 ## Helpful Commands
 
+Generations older than 30 days are garbage-collected automatically every week (`nix.gc` in `darwin/default.nix`). To clean up everything right away:
+
 ```shell
 # remove unused references / old-generations
-nix-collect-garbage -d
+make clean
 ```
 
 ## Rebuilding the System
@@ -65,7 +70,7 @@ After making changes to the configuration, you need to rebuild the system to app
 
 2. Switch to the new configuration:
    ```
-   ./result/sw/bin/darwin-rebuild switch --flake .#robert
+   sudo ./result/sw/bin/darwin-rebuild switch --flake .#robert
    ```
 
 ### Using the Makefile
@@ -97,4 +102,4 @@ To update Nix to the latest version available in your current Nixpkgs channel:
 
 ### Specifying a Nix Version
 
-If you want to use a specific version of Nix, modify the `darwin/default.nix` file:
+If you want to use a specific version of Nix, change `nix.package` in `darwin/default.nix`.

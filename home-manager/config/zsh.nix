@@ -10,12 +10,12 @@
     };
     history = {
       size = 100000;
-      save = 2000000;
+      save = 100000;
     };
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "history" ];
+      plugins = [ ];
     };
 
     plugins = [

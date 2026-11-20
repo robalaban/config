@@ -8,8 +8,11 @@ rebuild:
 	nix build .#darwinConfigurations.$(HOST).system
 	sudo ./result/sw/bin/darwin-rebuild switch --flake .#$(HOST)
 
+# Delete ALL old generations (user profiles, then system profiles — the
+# latter are root-owned, hence sudo) and every unreferenced store path.
 clean:
 	nix-collect-garbage -d
+	sudo nix-collect-garbage -d
 
 upgrade:
 	sudo -i nix upgrade-nix
